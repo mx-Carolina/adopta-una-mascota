@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,66 +21,258 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  font-weight: 300;
+  font-size: 1.2rem;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #c8e6c9;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a.active::after {
+  width: 100%;
+}
+
+.menu a.active {
+  font-weight: bold;
 }
 
 /* Hero */
 .hero {
-  background-color: #e8f5e9;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  color: #1b5e20;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.hero .eslogan {
+  font-size: 1.25rem;
+  color: #2e7d32;
+  margin-bottom: 2rem;
+  max-width: 600px;
 }
 
 .boton {
   background-color: #2e7d32;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+  transition: all 0.3s ease;
 }
 
-/* Secciones */
+.boton:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(46, 125, 50, 0.4);
+}
+
+/* Secciones generales */
 .seccion {
-  padding: 2rem;
-  max-width: 900px;
+  padding: 3rem 2rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .seccion h2 {
   color: #2e7d32;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #e8f5e9;
+  padding-bottom: 0.5rem;
 }
 
-/* Tarjetas de mascotas */
+/* ========================================================
+   Tarea: Sobre Nosotros (.nosotros)
+   ======================================================== */
+.mision {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.dato-curioso {
+  background-color: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+  padding: 1rem 1.2rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: #1b5e20;
+}
+
+.seccion h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.valores {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.valores li {
+  background-color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.valores .icono {
+  font-size: 1.3rem;
+  margin-right: 0.8rem;
+}
+
+/* ========================================================
+   Tarea: Tarjetas de Mascotas (.tarjetas)
+   ======================================================== */
 .tarjetas {
   display: flex;
-  gap: 1rem;
+  gap: 1.8rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tarjeta {
-  border: 1px solid #ccc;
   background: white;
-  padding: 1rem;
-  width: 200px;
-  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Efecto hover que "levanta" la tarjeta */
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta-contenido {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarjeta h3 {
+  color: #2e7d32;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.tarjeta .detalles {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.tarjeta .descripcion {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.boton-adopta {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-adopta:hover {
+  background-color: #2e7d32;
 }
 
 /* Formulario */
 .formulario label {
   display: block;
   margin-top: 0.5rem;
+  font-weight: bold;
 }
 
 .formulario input,
 .formulario textarea {
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* Pie de página */
@@ -87,5 +280,6 @@ body {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
 }
