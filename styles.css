@@ -89,3 +89,40 @@ body {
   text-align: center;
   padding: 1rem;
 }
+
+/* ==========================================
+   Diseño Responsivo (Pantallas menores a 600px)
+   ========================================== */
+@media (max-width: 600px) {
+  /* Encabezado y menú apilados */
+  .encabezado {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .menu a {
+    margin-left: 0;
+    display: block;
+    padding: 0.3rem 0;
+  }
+
+  /* Tarjetas en una sola columna ocupando todo el ancho */
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+  }
+}
