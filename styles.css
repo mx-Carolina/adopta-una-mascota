@@ -1,5 +1,5 @@
 /* Estilos base del proyecto Adopta una Mascota */
-* {
+- {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -368,7 +368,7 @@ body {
   flex-direction: column;
 }
 
-<<<<<<< HEAD
+
 /* Efecto hover que "levanta" la tarjeta */
 =======
 >>>>>>> feature/visita/contacto
@@ -424,7 +424,6 @@ body {
 .boton-adopta:hover {
   background-color: #2e7d32;
 <<<<<<< HEAD
->>>>>>> feature/nosotros/adopta
 =======
 }
 
@@ -518,11 +517,19 @@ body {
   padding: 1rem;
 }
 
+<<<<<<< HEAD
 /* ==========================================
    Diseño Responsivo (Pantallas menores a 600px)
    ========================================== */
 @media (max-width: 600px) {
   /* Encabezado y menú apilados */
+=======
+/* ==========================================================
+   Diseño responsivo (feature/responsive): Media queries
+   ========================================================== */
+@media (max-width: 600px) {
+  /* Se acomoda y apila el menú de navegación en pantallas menores a 600 px */
+>>>>>>> feature/responsive/readme/pulido
   .encabezado {
     flex-direction: column;
     gap: 1rem;
@@ -543,7 +550,11 @@ body {
     padding: 0.3rem 0;
   }
 
+<<<<<<< HEAD
   /* Tarjetas en una sola columna ocupando todo el ancho */
+=======
+  /* Las tarjetas de mascotas se muestran en una sola columna */
+>>>>>>> feature/responsive/readme/pulido
   .tarjetas {
     flex-direction: column;
     align-items: center;
@@ -553,6 +564,7 @@ body {
     width: 100%;
     max-width: 300px;
   }
+<<<<<<< HEAD
 =======
   padding: 1.5rem;
   margin-top: 2rem;
@@ -621,4 +633,6 @@ body {
 .redes-sociales .separador {
   color: #66bb6a;
 >>>>>>> feature/visita/contacto
+=======
+>>>>>>> feature/responsive/readme/pulido
 }
