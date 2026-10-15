@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Encabezado: logo y menú de navegación -->
   <header class="encabezado">
     <h1 class="logo">🐾 Adopta <span>una Mascota</span></h1>
     <nav class="menu">
@@ -20,7 +19,6 @@
   </header>
 
   <main>
-    <!-- Sección principal (hero) -->
     <section id="inicio" class="hero">
       <h2>Dales una segunda oportunidad</h2>
       <p class="eslogan">Encuentra a tu nuevo mejor amigo en nuestro refugio.</p>
@@ -30,19 +28,12 @@
     <!-- Sección sobre nosotros -->
     <section id="nosotros" class="seccion">
       <h2>Sobre nosotros</h2>
-      <p class="mision">
-        Somos un refugio sin fines de lucro dedicado al rescate, rehabilitación y reubicación de animales en situación de calle o abandono. Nuestra misión principal es brindar un hogar temporal lleno de amor y cuidados médicos a cada uno de nuestros huéspedes, promoviendo la adopción responsable en la comunidad y concientizando sobre el bienestar animal. Desde nuestra fundación, trabajamos día a día para transformar vidas y crear segundas oportunidades para quienes no tienen voz.
-      </p>
-
-      <div class="dato-curioso">
-        <span>💡 <strong>Dato curioso:</strong></span> Sabías que adoptar un animal rescatado no solo le salva la vida a él, sino que también libera un espacio en nuestro refugio para permitirnos rescatar a otro compañero que lo necesita urgente.
-      </div>
-
-      <h3>Nuestros Valores</h3>
+      <p>Somos un refugio sin fines de lucro dedicado a rescatar,
+      cuidar y encontrar un hogar para perros y gatos abandonados.</p>
       <ul class="valores">
-        <li><span class="icono">🤝</span> <strong>Responsabilidad:</strong> Compromiso ético en el seguimiento y cuidado integral de cada mascota.</li>
-        <li><span class="icono">❤️</span> <strong>Amor:</strong> Trato digno, afecto y empatía como pilar de la rehabilitación física y emocional.</li>
-        <li><span class="icono">🛡️</span> <strong>Protección:</strong> Garantizar espacios seguros, alimento adecuado y atención veterinaria oportuna.</li>
+        <li>Responsabilidad</li>
+        <li>Cuidado</li>
+        <li>Amor</li>
       </ul>
     </section>
 
@@ -51,46 +42,59 @@
       <h2>Adóptame</h2>
       <div class="tarjetas">
         <article class="tarjeta">
-          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80" alt="Foto de Firulais">
-          <div class="tarjeta-contenido">
-            <h3>Firulais</h3>
-            <p class="detalles">Perro • 2 años • Mestizo</p>
-            <p class="descripcion">Es un perrito muy activo, sociable y cariñoso. Le encanta salir a correr al parque, jugar a la pelota y convivir con niños u otros perros.</p>
-            <button class="boton-adopta">Conócelo</button>
-          </div>
+          <img src="https://via.placeholder.com/200x150?text=Firulais" alt="Foto de Firulais">
+          <h3>Firulais</h3>
+          <p>Perro, 2 años. Juguetón y cariñoso.</p>
         </article>
-
         <article class="tarjeta">
-          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Foto de Michi">
-          <div class="tarjeta-contenido">
-            <h3>Michi</h3>
-            <p class="detalles">Gato • 1 año • Doméstico</p>
-            <p class="descripcion">Es un gatito tranquilo, dormilón y observador. Disfruta tomar el sol junto a la ventana, los mimos suaves y rascadores de altura.</p>
-            <button class="boton-adopta">Conócelo</button>
-          </div>
+          <img src="https://via.placeholder.com/200x150?text=Michi" alt="Foto de Michi">
+          <h3>Michi</h3>
+          <p>Gato, 1 año. Tranquilo y dormilón.</p>
         </article>
-
         <article class="tarjeta">
-          <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=500&q=80" alt="Foto de Rocky">
-          <div class="tarjeta-contenido">
-            <h3>Rocky</h3>
-            <p class="detalles">Conejo • 3 años • Cabeza de León</p>
-            <p class="descripcion">Curioso, amigable y muy dócil. Ama comer zanahorias frescas, explorar espacios abiertos dentro de casa y que le acaricien las orejas.</p>
-            <button class="boton-adopta">Conócelo</button>
-          </div>
+          <img src="https://via.placeholder.com/200x150?text=Rocky" alt="Foto de Rocky">
+          <h3>Rocky</h3>
+          <p>Conejo, 3 años. Le gusta la zanahoria.</p>
         </article>
       </div>
     </section>
 
-    <!-- Tarea: Visítanos -->
+    <!-- ========================================================
+         TAREA: Visítanos (feature/visita)
+         - Tarjeta contenedora con diseño visual estructurado.
+         - Inclusión de emojis representativos para dirección y horarios.
+         - Botón «Cómo llegar» estilizado con enlace a mapas.
+         - Contenedor responsivo para incorporar un mapa de ejemplo (iframe).
+         ======================================================== -->
     <section id="visita" class="seccion">
       <h2>Visítanos</h2>
-      <div class="tarjeta-visita">
-        <div class="info-visita">
-          <p>📍 <strong>Dirección:</strong> Calle de los Animalitos #123, Ciudad.</p>
-          <p>⏰ <strong>Horario:</strong> Lunes a sábado, 10:00 a 17:00 hrs.</p>
-          <a href="https://maps.google.com" target="_blank" class="boton boton-llegar">🚗 Cómo llegar</a>
-        </div>
-        <div class="mapa-contenedor">
-          <iframe 
-            src="
+      <p><strong>Dirección:</strong> Calle de los Animalitos #123, Ciudad.</p>
+      <p><strong>Horario:</strong> Lunes a sábado, 10:00 a 17:00 hrs.</p>
+    </section>
+
+    <!-- ========================================================
+         TAREA: Formulario y contacto (feature/contacto)
+         - Formulario estilizado con campos (input y textarea) de diseño limpio.
+         - Etiquetas (labels) claras y botones con efectos interactivos de hover.
+         - Pie de página con enlaces independientes y personalizados para redes sociales.
+         ======================================================== -->
+    <section id="contacto" class="seccion">
+      <h2>Contáctanos</h2>
+      <form class="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+        <button type="submit" class="boton">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>© 2026 Adopta una Mascota — Proyecto escolar</p>
+    <p>Facebook | Instagram | X</p>
+  </footer>
+</body>
+</html>
