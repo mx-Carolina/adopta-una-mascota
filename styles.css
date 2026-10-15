@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,32 +21,119 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  font-weight: 300;
+  font-size: 1.2rem;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
 }
 
-/* Hero */
+.menu a:hover {
+  color: #c8e6c9;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a.active::after {
+  width: 100%;
+}
+
+.menu a.active {
+  font-weight: bold;
+}
+
+/* ========================================================
+   Tarea 2: Sección Principal / Hero (.hero)
+   ======================================================== */
 .hero {
-  background-color: #e8f5e9;
+  /* Fondo con degradado verde fresco */
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Título principal más grande y llamativo */
+.hero h2 {
+  font-size: 2.8rem;
+  color: #1b5e20;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Eslogan del refugio */
+.hero .eslogan {
+  font-size: 1.25rem;
+  color: #2e7d32;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Botón general */
 .boton {
   background-color: #2e7d32;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  border-radius: 25px; /* Esquinas redondeadas estilo píldora */
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3); /* Sombra suave */
+  transition: all 0.3s ease;
+}
+
+/* Efecto Hover interactivo para el botón */
+.boton:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px); /* Eleva ligeramente el botón */
+  box-shadow: 0 6px 14px rgba(46, 125, 50, 0.4);
+}
+
+.boton:active {
+  transform: translateY(0);
 }
 
 /* Secciones */
 .seccion {
-  padding: 2rem;
+  padding: 3rem 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -68,18 +156,24 @@ body {
   padding: 1rem;
   width: 200px;
   text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 /* Formulario */
 .formulario label {
   display: block;
   margin-top: 0.5rem;
+  font-weight: bold;
 }
 
 .formulario input,
 .formulario textarea {
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* Pie de página */
@@ -87,6 +181,7 @@ body {
   background-color: #333;
   color: white;
   text-align: center;
+ HEAD
   padding: 1rem;
 }
 
